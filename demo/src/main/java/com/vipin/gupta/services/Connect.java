@@ -23,12 +23,7 @@ public class Connect implements IConnect {
 		boolean isConnected  = origin.equals(destination);
 		
 		if (map.containsKey(origin) && map.containsKey(destination)) {
-			// By using a Queue, we are implementing Breadth First Search
-			// This will find the shortest path between two cities
 			Queue<String> citiesToVisit = new LinkedList<String>();
-
-			// We keep a set of the cities we have already visited. This prevents BFS from looping in
-			// cycles and allows the BFS to terminate if no path can be found after exploring all reachable nodes
 			Set<String> citiesAlreadyVisited = new HashSet<String>();
 
 			citiesToVisit.add(origin);
